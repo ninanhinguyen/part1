@@ -1,28 +1,39 @@
 
-const App = () => {
-	const course = 'Half Stack application development'
-	const part1 = 'Fundamentals of React'
-	const exercise1 = 10
-	const part2 = 'Using props to pass data'
-	const exercise 2 = 7
-	const part3 = 'State of a component'
-	const exercise3 = 14
-
-	return (
-		<>
-			<h1{course}</h1>
-		<p>
-		{part1} {exercise1}
-		</p>
-		<p>
-		{part2} {exercise2}
-	</p>
-		<p>
-		{part3} {exercise3}
-	</p>
-		<p> Number of exercise {exercise1 + exercise2 + exercise3}</p>
-	</>
+const Header = ({courseName}) => {
+	console.log(courseName)
+return(
+  <div>
+    <p>Greetings to {courseName}</p>
+  </div>
 	)
-		
+}
+const Content = ({courseContent}) => {
+	console.log(courseContent)
+		return(
+	 <div>
+    <p> In this course, you will learn {courseContent} </p>
+  </div>
+)
+}
+const Total = ({courseExerciseNumber}) => {
+	console.log(courseExerciseNumber)
+    return(
+      <div>
+        	<p> There's total {courseExerciseNumber} exercises </p>
+      </div>
+    )
+	}
+const App = () => {
+  const courseName = 'Half Stack application development'
+  const courseContent = 'Fundamentals of React, Using props to pass data, State of a component'
+  const courseExerciseNumber = 10 + 7 + 14
+
+return (
+<div>
+    <Header courseName = {courseName}/>
+    <Content courseContent = {courseContent}/>
+    <Total courseExerciseNumber = {courseExerciseNumber}/>
+  </div>
+)
 }
 export default App
