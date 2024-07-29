@@ -25,7 +25,7 @@ const Total = ({courseExerciseNumber}) => {
 	}
 const App = () => {
   const courseName = 'Half Stack application development'
-  const courseContent = 'Fundamentals of React, Using props to pass data, State of a component'
+  const courseContent ='Fundamentals of React, Using props to pass data, State of a component'
   const courseExerciseNumber = 10 + 7 + 14
 
 return (
